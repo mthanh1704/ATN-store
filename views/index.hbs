@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>ATN Store</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <style>
+      /* Remove the navbar's default margin-bottom and rounded borders */
+      .navbar {
+         margin-bottom: 0;
+         border-radius: 0;
+      }
+
+      /* Add a gray background color and some padding to the footer */
+      footer {
+         background-color: #f2f2f2;
+         padding: 25px;
+      }
+
+      .carousel-inner img {
+         width: 100%;
+         /* Set width to 100% */
+         margin: auto;
+         min-height: 200px;
+      }
+
+      /* Hide the carousel text when the screen is less than 600 pixels wide */
+      @media (max-width: 600px) {
+         .carousel-caption {
+            display: none;
+         }
+      }
+
+      .footer {
+         position: fixed;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         color: black;
+         text-align: center;
+      }
+   </style>
+</head>
+
+<body>
+
+   <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+         </div>
+         <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+               <li class="active"><a href="/">Home</a></li>
+               <li><a href="/insert">Insert Product</a></li>
+               <li><a href="/view">View Product</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+
+
+
+      <div class="container text-center">
+         <h1>Best - Selling Product</h1><br>
+         <div class="row">
+            <div class="col-sm-4">
+               <img src="https://images-na.ssl-images-amazon.com/images/I/91F6wTOzwVL._AC_SL1500_.jpg"
+                  class="img-responsive" style="width:360px;height:370px;" alt="Image">
+               <h3>Dragon Ball</h3>
+            </div>
+            <div class="col-sm-4">
+               <img src="https://cf.shopee.vn/file/25345ec911371e7c15f86d94f0aa79d8" class="img-responsive"
+                  style="width:360px;height:370px;" alt="Image">
+               <h3>Doremon</h3>
+            </div>
+            <div class="col-sm-4">
+               <img
+                  src="https://ae01.alicdn.com/kf/Hedd253594e224d089ace497e891f697bZ/Naruto-Shippuden-Shf-Uzumaki-Rasengan-Action-Figures-Super-Movable-Joints-Face-Change-Dolls-Anime-Figurines-Model.jpg"
+                  class="img-responsive" style="width:360px;height:370px;" alt="Image">
+               <h3>Naruto</h3>
+            </div>
+         </div>
+      </div><br>
+
+
+      <div class="footer">
+         <footer class="container-fluid text-center">
+            <span class="footer-copyright">MinhThanh Shop © Copyright 2021. All Rights
+               Reserved.</span>
+         </footer>
+      </div>
+
+
+</body>
+
+</html>

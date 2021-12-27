@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <title>All Products</title>
+</head>
+
+<head>
+   <title>ATN Store</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+   <br>
+   <ul>
+      <li><button><a href="insert">Add new products</a></button></li>
+      <li><button>
+            <a="active"><a href="/">Home</a>
+         </button></li>
+   </ul>
+   <hr>
+   <table class="table bordered">
+      <thead>
+         <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Delete</th>
+            <th>Update</th>
+         </tr>
+      </thead>
+      {{#each products}}
+      <tr>
+         <td>{{name}}</td>
+         <td>{{price}} $</td>
+         <td><img width="200px" , height="200px" src="{{image}}" alt=""></td>
+         <td><a href="/delete?id={{_id}}">Delete</a></td>
+         <td><a href="/edit?id={{_id}}">Update</a></td>
+      </tr>
+      {{/each}}
+   </table>
+</body>
+
+</html>
