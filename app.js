@@ -33,7 +33,7 @@ app.post('/product',async (req,res)=>{
     const imageInput = req.body.txtImage
     if(isNaN(priceInput)==true){
        
-        const errorMessage = "Gia phai la so!"
+        const errorMessage = "Error!"
         const oldValues = {name:nameInput,price:priceInput,image:imageInput}
         res.render('product',{error:errorMessage,oldValues:oldValues})
         return;
