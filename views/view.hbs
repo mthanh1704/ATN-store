@@ -29,6 +29,11 @@
             <a="active"><a href="/">Home</a>
          </button></li>
    </ul>
+   <form style="padding: 15px 0;" action="/doSearchProducts" method="post">
+      <input type="text" name="txtName" id="" style=";">
+      <label for style="color: brown;">{{model.searchError}}</label>
+      <input type="submit" value="Search">
+   </form>
    <hr>
    <table class="table bordered">
       <thead>

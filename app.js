@@ -55,6 +55,16 @@ app.get('/delete',async (req,res)=>{
     res.redirect('/view')
 })
 
+// Search product funtion
+app.post('/doSearchProducts', async (req, res) => {
+    const inputName = req.body.txtName;
+    const dbo = await getDatabase()
+    const results = await dbo.collection("Products").find({ name: new RegExp(inputName, "i") }).sort({ Name: -1 }).toArray();
+
+    res.render('view', { model: results });
+});
+
+
 // Edit product funtion
 app.post('/edit',async (req,res)=>{
     const nameInput = req.body.txtName
