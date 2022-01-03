@@ -61,7 +61,7 @@ app.post('/doSearchProducts', async (req, res) => {
     const dbo = await getDatabase()
     const results = await dbo.collection("Products").find({ name: new RegExp(inputName, "i") }).sort({ Name: -1 }).toArray();
 
-    res.render('view', { model: results });
+    res.render('view', { products: results });
 });
 
 
@@ -96,8 +96,3 @@ async function getDatabase() {
 const PORT = process.env.PORT || 5000
 app.listen(PORT)
 console.log('Server is running!')
-
-
-
-
-
