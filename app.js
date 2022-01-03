@@ -56,7 +56,7 @@ app.get('/delete',async (req,res)=>{
 })
 
 // Search product funtion
-app.post('/doSearchProducts', async (req, res) => {
+app.post('/search', async (req, res) => {
     const inputName = req.body.txtName
     const dbo = await getDatabase()
     const results = await dbo.collection("Products").find({ name: new RegExp(inputName, "i") }).sort({ Name: -1 }).toArray()
