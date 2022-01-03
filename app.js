@@ -62,7 +62,7 @@ app.get('/delete',async (req,res)=>{
 app.post('/search', async (req, res) => {
     const nameInput = req.body.txtName
     const dbo = await getDatabase()
-    const results = await dbo.collection("Products").find({ name: new RegExp(nameInput, "i") }).sort({ name: -1 }).toArray();
+    const results = await dbo.collection("Products").find({ name: new RegExp(nameInput) }).sort({ name: 1 }).toArray()
 
     res.render('view', { products: results })
 });
