@@ -1,4 +1,7 @@
 const express = require('express')
+const req = require('express/lib/request')
+const res = require('express/lib/response')
+const async = require('hbs/lib/async')
 const app = express()
 const {MongoClient,ObjectId} = require('mongodb')
 
@@ -56,13 +59,13 @@ app.get('/delete',async (req,res)=>{
 })
 
 // Search product funtion
-app.post('/search', async (req, res) => {
-    const inputName = req.body.txtName
+app.post('/search',async (req,res)=>{
+    const nameInput = req.body.txtName
     const dbo = await getDatabase()
-    const results = await dbo.collection("Products").find({ name: new RegExp(inputName, "i") }).sort({ Name: -1 }).toArray()
+    const results = await dbo.collection("Product").find({nameInput}).sort({name : 1}).limit(2).toArray()
 
-    res.render('view', { products: results })
-});
+    res.render('view' ,{products : results})
+})
 
 
 // Edit product funtion

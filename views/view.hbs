@@ -30,7 +30,7 @@
          </button></li>
    </ul>
    <form style="padding: 15px 0;" action="/search" method="post">
-      <input type="text" name="txtName" id="" style=";" placeholder="Seacrh Products">
+      <input type="text" name="txtName">
       <input type="submit" value="Search">
    </form>
    <hr>
@@ -49,7 +49,7 @@
          <td>{{name}}</td>
          <td>{{price}} $</td>
          <td><img width="200px" , height="200px" src="{{image}}" alt=""></td>
-         <td><a href="/delete?id={{_id}}">Delete</a></td>
+         <td><a href="/delete?id={{_id}}">Delete </a></td>
          <td><a href="/edit?id={{_id}}">Update</a></td>
       </tr>
       {{/each}}
